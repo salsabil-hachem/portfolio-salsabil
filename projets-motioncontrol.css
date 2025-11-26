@@ -1,0 +1,294 @@
+/* =========================================
+   STYLE SPECIFIQUE : PAGE DETAILS PROJET
+   ========================================= */
+
+/* --- Configuration de base de la page projet --- */
+.project-page-body {
+    background-color: #000000; /* Fond noir pur */
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Header (Logo KTIX + Titre) --- */
+.project-header-container {
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Pour que ça passe bien sur mobile */
+}
+
+.project-logo-box {
+    width: 80px;
+    height: 80px;
+    background: #000;
+    border: 2px solid #fff; /* Bordure blanche carrée */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.project-title-text h1 {
+    font-size: 36px;
+    color: #fff;
+    margin: 5px 0 0 0;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.lab-name {
+    color: #888;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* --- Conteneur Principal --- */
+.project-main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px 20px;
+}
+
+/* Grilles pour aligner gauche/droite */
+.details-grid-top, 
+.details-grid-bottom {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* La colonne description est un peu plus large */
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* --- Les Cartes (Boites Grises) --- */
+.detail-card {
+    background-color: #0a0a0a; /* Gris très très foncé (presque noir) */
+    border: 1px solid #222;    /* Bordure grise discrète */
+    border-radius: 20px;
+    padding: 30px;
+    height: 100%; /* Pour que les boites aient la même hauteur */
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-title {
+    color: #ff007f; /* ROSE Salsabil */
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.detail-text {
+    line-height: 1.7;
+    color: #ccc;
+    font-size: 16px;
+}
+
+/* --- Tags Technologies (Pilules) --- */
+.tech-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tech-pill {
+    padding: 8px 18px;
+    border: 1px solid #333;
+    border-radius: 50px;
+    color: #ff007f; /* Texte Rose */
+    font-weight: 500;
+    font-size: 14px;
+    background: rgba(255, 0, 127, 0.05); /* Fond rose très léger */
+    transition: 0.3s ease;
+}
+
+.tech-pill:hover {
+    border-color: #ff007f;
+    background: #ff007f;
+    color: #fff;
+    cursor: default;
+}
+
+/* --- Section Images --- */
+.full-width {
+    grid-column: span 2; /* Prend toute la largeur si besoin */
+}
+
+.demo-images-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 images côte à côte */
+    gap: 20px;
+}
+.demo-images-grid .demo-img-wrapper img {
+    /* 1. Limite la hauteur (vous pouvez changer 300px par 250px ou 400px) */
+    max-height: 300px; 
+    
+    /* 2. La largeur s'adapte automatiquement pour ne pas déformer l'image */
+    width: auto;
+    
+    /* 3. L'image ne dépasse jamais la largeur de son conteneur */
+    max-width: 100%; 
+    
+    /* 4. Centre l'image si elle est plus petite que la case */
+    display: block;
+    margin: 0 auto;
+    
+    /* 5. S'assure que l'image entière est visible */
+    object-fit: contain; 
+}
+
+.demo-img-wrapper {
+    background: #000;
+    padding: 10px;
+    min-height: 320px;
+    border-radius: 15px;
+    border: 1px solid #222;
+}
+
+.demo-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.img-caption {
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* --- Liste des Résultats (Outcome) --- */
+.outcome-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.outcome-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.outcome-list li::before {
+    content: '•'; /* Puce personnalisée */
+    color: #ff007f;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+/* --- Bouton Retour --- */
+.back-button-container {
+    text-align: center;
+    margin-top: 120px !important;
+    margin-bottom: 60px;
+}
+
+.back-home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ff007f; /* Fond Rose */
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-home-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 0, 127, 0.4);
+}
+
+.simple-footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #111;
+    color: #555;
+    font-size: 14px;
+}
+/* =========================================
+   AJOUTS SPECIFIQUES PROJET ROBOTIQUE
+   ========================================= */
+
+/* Le sous-titre blanc dans la description */
+.detail-card h3 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Le titre "Key Achievements" en rose */
+.detail-card h4 {
+    color: #ff007f; /* Rose Salsabil */
+    font-size: 18px;
+    margin-top: 25px; /* Espace au-dessus */
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+/* Ajustement de l'image du laptop dans la colonne technologies */
+.detail-card .demo-img-wrapper {
+    margin-top: auto; /* Pousse l'image vers le bas si il y a de la place */
+}
+/* Pour s'assurer que les images s'empilent bien */
+.images-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+}
+/* Modification pour avoir les triangles roses comme sur la photo */
+.outcome-list li::before {
+    content: '▶';      /* Triangle au lieu du point */
+    color: #ff007f;     /* Rose Salsabil */
+    font-size: 12px;    /* Taille plus petite et fine */
+    position: absolute;
+    left: 0;
+    top: 4px;           /* Ajustement pour être aligné au texte */
+}
+
+@media (max-width: 900px) {
+    .images-column {
+        width: 100%;
+    }
+}
+/* --- RESPONSIVE (Mobile) --- */
+@media (max-width: 900px) {
+    /* Sur mobile, tout passe en une seule colonne */
+    .details-grid-top, 
+    .details-grid-bottom, 
+    .demo-images-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .project-title-text h1 {
+        font-size: 28px;
+    }
+}
